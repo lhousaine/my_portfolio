@@ -122,7 +122,7 @@ let resumeData = {
         {
             "name": "Bank Web App",
             "description": "Design And development of a Web Application for managing on bank",
-            "imgurl": "imags/bankApp.png"
+            "imgurl": "imgs/bankApp.png"
         }
     ]
 }
