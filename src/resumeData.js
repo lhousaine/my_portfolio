@@ -105,24 +105,24 @@ let resumeData = {
     ],
     "portfolio": [
         {
-            "name": "project1",
-            "description": "mobileapp",
-            "imgurl": "images/portfolio/phone.jpg"
+            "name": "um6p Intern",
+            "description": "the Home page of SIMLAB Site Web Application ",
+            "imgurl": "imgs/AccueilSiteWebSimlab.png"
         },
         {
-            "name": "project2",
-            "description": "mobileapp",
-            "imgurl": "images/portfolio/project.jpg"
+            "name": "Trending Repositories web Application",
+            "description": "A web application developped in Microservices Architecture, It's an application for statics of trending repositories In Github",
+            "imgurl": "imgs/trendingRepositoriesApp.png"
         },
         {
-            "name": "project3",
-            "description": "mobileapp",
-            "imgurl": "images/portfolio/project2.png"
+            "name": "Gym Desktop App",
+            "description": "Design And development of a Desktop Application for Gym Management ",
+            "imgurl": "imgs/gymDesktopApp.PNG"
         },
         {
-            "name": "project4",
-            "description": "mobileapp",
-            "imgurl": "images/portfolio/phone.jpg"
+            "name": "Bank Web App",
+            "description": "Design And development of a Web Application for managing on bank",
+            "imgurl": "imags/bankApp.png"
         }
     ]
 }
