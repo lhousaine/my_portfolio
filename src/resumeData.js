@@ -4,6 +4,10 @@ let resumeData = {
     "role": "Full Satck Developer",
     "contacts":[
         {
+            "name":"Phone Number",
+            "userId":"(+212)603708829"
+        },
+        {
             "name":"linkedin",
             "url":"https://www.linkedin.com/in/lhoussaine-ouarhou/",
             "userId":"@lhoussaine ouarhou"
@@ -20,7 +24,7 @@ let resumeData = {
         }
     ],
     "skypeid": "lhoussaine ouarhou",
-    "roleDescription": "I am interested in full-stack development & Microservices Architectures and everything in its orbit.I like to learn and create web applications in various parts of software development and like to learn about new technologies",
+    "roleDescription": "",
     "socialLinks": [
         {
             "name": "linkedin",
@@ -33,50 +37,92 @@ let resumeData = {
             "className": "fa fa-github"
         }
     ],
-    "aboutme": "I am an engineer in computer science, graduated from the National School of Applied Sciences of Marrakech. I am a self taught Full Stack Web Developer. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
+    "aboutme": "I am a computer sciences engineer , graduated from the National School of Applied Sciences of Marrakech. I am interested in full-stack development & Microservices Architectures and everything in its orbit.I like to learn and create web applications in various parts of software development and like to learn about new technologies.",
     "address": "DR AIT ALLA TAZARINE ZAGORA, MAROC",
     "website": "https://lhousaine.github.io",
     "education": [
         {
+            "degree":"Computer Sciences Engineer",
             "UniversityName": "National School of Applied Sciences of Marrakech",
             "specialization": "Computer Science",
-            "MonthOfPassing": "June",
-            "YearOfPassing": "2020",
-            "Achievements": "Some Achievements"
+            "DateOfIntegrating": "September 2015",
+            "DateOfGraduating": "June 2020",
+            "Achievements": [
+                "3rd year Engineer's cycle",
+                "2 years preparatory cycle"
+            ]
         },
+        {
+            "degree":"Bachelor's degree",
+            "UniversityName": "Sidi Amrou High School Tazarine zagora",
+            "specialization": "Physics Science ",
+            "DateOfIntegrating": "September 2012",
+            "DateOfGraduating": "June 2015"
+        }
     ],
     "work": [
         {
             "CompanyName": "SQLI ISC MAROC",
             "specialization": "Developer Java/JEE/Microservices- Intern",
-            "MonthOfLeaving": "August",
+            "MonthOfLeaving": "March - August",
             "YearOfLeaving": "2020",
-            "Achievements": "Some Achievements"
+            "theme":"Study and implementing of a Service Mesh solution, in an e-commerce context.",
+            "Achievements": [
+              "Study and comparison of Service Mesh solutions.",
+              "Design and development of an e-commerce application under the microservices architecture.",
+              "Deployment and integration of the best mesh service solution (Istio). "
+            ],
+            "Tools": [
+              "Service mesh solutions : Istio, Linkerd2, Consul." ,
+              "Development technologies: Spring, Nodejs, JWT, MySQL, mongoDB, Redis, RabbitMQ, ... ",
+              "Payment : Stripe",
+              "Deployment technologies: docker, Kubernetes(Helm), Azure(AKS)..."
+            ]
         },
         {
             "CompanyName": "Mohammed VI Polytechnic University Ben Guerir",
             "specialization": "Web Developer-Intern",
-            "MonthOfLeaving": "August",
+            "MonthOfLeaving": "Jully - August",
             "YearOfLeaving": "2019",
-            "Achievements": "Some Achievements"
+            "theme":"Web Programming:",
+            "Achievements": [
+              "Axis 1: Creation Under WordPress of the SIMLAB Department Website, and Configuration of its deployment in a nginx server.",
+              "Axis 2: Study and Design of a web service for dynamic inventory analysis and management."
+            ]
+        },
+        {
+            "CompanyName": "Mohammed VI Polytechnic University Ben Guerir",
+            "specialization": "Web Developer-Intern",
+            "MonthOfLeaving": "Jully - September",
+            "YearOfLeaving": "2018",
+            "theme":"Web Programming:",
+            "Achievements": [
+              "Development of a news website with (HTML, CSS, JS, AngularJS, MySQL, and PHP)"
+            ]
         }
     ],
-    "skillsDescription": "Your skills here",
+    "skillsDescription": "my professional skills",
     "skills": [
         {
             "skillname": "Java"
         },
         {
-            "skillname": "JEE (JPA, JSP, Struts,JSF)"
+            "skillname": "JEE (JPA, JSP, Hibernate, Struts,JSF)"
         },
         {
-            "skillname": "Spring and it's Modules(Boot,Data, MVC, Security, Batch,WebFlux, AOP)"
+            "skillname": "Spring and it's Modules(Boot,Data, MVC, Security, Batch, WebFlux, AOP)"
         },
         {
-            "skillname": "Javascript"
+            "skillname": "Javascript/Typescript"
+        },
+        {
+            "skillname": "Node.js/ExpressJS"
         },
         {
             "skillname": "Angular"
+        },
+        {
+            "skillname": "NGXS"
         },
         {
             "skillname": "Reactjs"
@@ -94,35 +140,47 @@ let resumeData = {
             "skillname": "Docker"
         },
         {
-            "skillname": "Kubernetes"
+            "skillname": "Kubernetes (Helm)"
+        },
+        {
+            "skillname": "Gitlab CI/CD"
         },
         {
             "skillname": "Cloud Plateforms (Azure, IBM, GCP)"
         },
         {
-            "skillname": "Service mesh"
+            "skillname": "Service mesh (Istio, Linkerd2, Consul)"
+        },
+        {
+            "skillname": "Git, Gitlab, Github"
+        },
+        {
+            "skillname": "Databases: MySQL, MongoDB, Oracle,Postres, Firebaser"
+        },
+        {
+            "skillname": "Familiar with Android, Flutter"
         }
     ],
     "portfolio": [
         {
             "name": "um6p Intern",
             "description": "the Home page of SIMLAB Site Web Application ",
-            "imgurl": "imgs/AccueilSiteWebSimlab.png"
+            "imgurl": "/imgs/AccueilSiteWebSimlab.png"
         },
         {
             "name": "Trending Repositories web Application",
             "description": "A web application developped in Microservices Architecture, It's an application for statics of trending repositories In Github",
-            "imgurl": "imgs/trendingRepositoriesApp.png"
-        },
-        {
-            "name": "Gym Desktop App",
-            "description": "Design And development of a Desktop Application for Gym Management ",
-            "imgurl": "imgs/gymDesktopApp.PNG"
+            "imgurl": "/imgs/trendingRepositoriesApp.png"
         },
         {
             "name": "Bank Web App",
             "description": "Design And development of a Web Application for managing on bank",
-            "imgurl": "imgs/bankApp.png"
+            "imgurl": "/imgs/bankApp.png"
+        },
+        {
+            "name": "Gym Desktop App",
+            "description": "Design And development of a Desktop Application for Gym Management ",
+            "imgurl": "/imgs/gymDesktopApp.png"
         }
     ]
 }

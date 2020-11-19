@@ -4,7 +4,7 @@ export default class Resume extends Component {
         let resumeData = this.props.resumeData;
         return (
             <section id="resume" className="resume">
-                <div className="row education">
+                <div className="education">
                     <div className="three columns header-col">
                         <h1><span>Education</span></h1>
                     </div>
@@ -14,13 +14,21 @@ export default class Resume extends Component {
                                 return (
                                     <div className="row item">
                                         <div className="twelve columns">
+                                            <p><b>{item.degree}</b></p>
                                             <h3>{item.UniversityName}</h3>
+                                            <p className="date">{item.DateOfIntegrating} - {item.DateOfGraduating}</p>
                                             <p className="info">
                                                 {item.specialization}
-                                                <span>&bull;</span> <em className="date">{item.MonthOfPassing} {item.YearOfPassing}</em></p>
-                                            <p>
-                                                {item.Achievements}
                                             </p>
+                                            <ul>
+                                                {
+                                            item.Achievements && item.Achievements.map((item) => {
+                                                return (
+                                                    <li>{item}</li>
+                                                )
+                                            })
+                                            }
+                                            </ul>
                                         </div>
                                     </div>
                                 )
@@ -28,9 +36,9 @@ export default class Resume extends Component {
                         }
                     </div>
                 </div>
-                <div className="row work">
+                <div className="works">
                     <div className="three columns header-col">
-                        <h1><span>Work</span></h1>
+                        <h1><span>Work and Experinces</span></h1>
                     </div>
                     <div className="nine columns main-col">
                         {
@@ -41,9 +49,28 @@ export default class Resume extends Component {
                                             <h3>{item.CompanyName}</h3>
                                             <p className="info">
                                                 {item.specialization}
-                                                <span>&bull;</span> <em className="date">{item.MonthOfLeaving} {item.YearOfLeaving}</em></p>
+                                                <span>&bull;</span> <em className="date">{item.MonthOfLeaving} - {item.YearOfLeaving}</em></p>
                                             <p>
-                                                {item.Achievements}
+                                                <h4>{item.theme}</h4>
+                                                <ul className="achievements">
+                                                    {
+                                                        item.Achievements && item.Achievements.map((item) => {
+                                                            return (
+                                                                <li>{item}</li>
+                                                            )
+                                                        })
+                                                    }
+                                                </ul>
+                                                {item.Tools?<h4>Tools :</h4>:""}
+                                                <ul className="tools">
+                                                    {
+                                                        item.Tools && item.Tools.map((item) => {
+                                                            return (
+                                                                <li>{item}</li>
+                                                            )
+                                                        })
+                                                    }
+                                                </ul>
                                             </p>
                                         </div>
                                     </div>
@@ -52,14 +79,11 @@ export default class Resume extends Component {
                         }
                     </div>
                 </div>
-                <div className="row skill">
+                <div className="skills">
                     <div className="three columns header-col">
                         <h1><span>Skills</span></h1>
                     </div>
                     <div className="nine columns main-col">
-                        <p>
-                            {resumeData.skillsDescription}
-                        </p>
                         <div className="bars">
                             <ul className="skills">
                                 {

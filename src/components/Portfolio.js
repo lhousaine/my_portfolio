@@ -6,29 +6,23 @@ export default class Porfolio extends Component {
         return (
             <section id="portfolio" className="portfolio">
                 <div className="row">
-                    <div className="twelve columns collapsed">
-                        <h1>Check Out Some of My Works.</h1>
-                        <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf" alt="">
-                            {
-                                resumeData.portfolio && resumeData.portfolio.map((item) => {
-                                    return (
-                                        <div className="columns portfolio-item">
-                                            <div className="item-wrap">
-                                                <div>
-                                                    <img src={`${item.imgurl}`} className="item-img" />
-                                                    <div className="overlay">
-                                                        <div className="portfolio-item-meta">
-                                                            <h5>{item.name}</h5>
-                                                            <p>{item.description}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                    <div className="title">Check Out Some of My Works.</div>
+                    <div className="portfolio_works">
+                        {
+                            resumeData.portfolio && resumeData.portfolio.map((item) => {
+                                return (
+                                    <div className="portfolio-work">
+                                        <div className="overlay">
+                                            <div className="portfolio-item-meta">
+                                                <h5>{item.name}</h5>
+                                                <p>{item.description}</p>
                                             </div>
                                         </div>
-                                    )
-                                })
-                            }
-                        </div>
+                                        <img src={process.env.PUBLIC_URL + item.imgurl} className="work_img" />
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </section>

@@ -10,16 +10,17 @@ import Footer from './components/Footer';
 import resumeData from './resumeData';
 
 class App extends Component {
+  componentDidMount(){
+    document.title = "Portfolio OUARHOU lhoussaine"
+  }
   render() {
     return (
       <div className="App">
         <Header resumeData={resumeData} />
-        <Presentation resumeData={resumeData} />
         <About resumeData={resumeData} />
         <Resume resumeData={resumeData} />
         <Portfolio resumeData={resumeData} />
         <ContactMe resumeData={resumeData} />
-        <Footer resumeData={resumeData} />
       </div>
     );
   }

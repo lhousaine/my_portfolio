@@ -8,27 +8,27 @@ export default class ContactMe extends Component {
                 <div className="row">
                     <div>
                         <p className="lead">
-                            Feel free to contact me for any work or suggestions below
-</p>
+                            Feel free to contact me for any work or suggestions below:
+                        </p>
                     </div>
                 </div>
-                <div className="row">
+                <div>
                     <aside>
-                        <div>
-                               {
-                                    resumeData.contacts && resumeData.contacts.map(item => {
-                                        return (
-                                            <li key={item.name}>
-                                                <span>{item.name}: </span>
-                                                <a href={item.url} target="">
-                                                    <span>{  item.userId }</span>
-                                                </a>
-                                            </li>
-                                        )
-                                    }
+                        <ul className="contacts">
+                            {
+                                resumeData.contacts && resumeData.contacts.map(item => {
+                                    return (
+                                        <li key={item.name}>
+                                            <span>{item.name}: </span>
+                                            <a className="contact" href={item.url} target="">
+                                                <span>{item.userId}</span>
+                                            </a>
+                                        </li>
                                     )
                                 }
-                        </div>
+                                )
+                            }
+                        </ul>
                     </aside>
                 </div>
             </section>
