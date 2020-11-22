@@ -58,6 +58,7 @@ header{
   display: flex;
   flex-direction: row;
 }
+
 .about div{
   padding-right:10px;
 }
@@ -67,18 +68,31 @@ header{
 .resume{
   background-color: #3DE5E7;
   color: #010101;
+}
+.resume-content{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.resume div{
+.resume-content div{
   margin: 0 5px;
+}
+
+.resume-link{
+  text-align: center;
+}
+.resume-link a{
+  text-decoration: none;
+  text-align: center;
+  color: rgb(161, 154, 123);
 }
 /* Portfolio*/
 .portfolio{
   background-color: #7753D1;
 }
-
+.portfolio_works{
+  text-align: center;
+}
 .portfolio-work{
   width:40%;
   height: 400px;
@@ -95,10 +109,10 @@ header{
 .contactMe{
   background-color: #203040;
   color: white;
+  padding-left: 30%;
 }
 .contacts{
-  list-style-type:square;
-
+  list-style-type:none;
 }
 .contact{
   text-decoration: solid;
@@ -108,12 +122,12 @@ header{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: inherit;
 }
-.contact:hover{
+a:hover{
   color: #f1951c;
 }
 /* Footer */ 
 .footer{
   width: 100%;
   background-color: #203040;
-  color: white;
+  color: #ffffff;
 }

@@ -4,13 +4,8 @@ let resumeData = {
     "role": "Full Satck Developer",
     "contacts":[
         {
-            "name":"Phone Number",
+            "name":"phoneNumber",
             "userId":"(+212)603708829"
-        },
-        {
-            "name":"linkedin",
-            "url":"https://www.linkedin.com/in/lhoussaine-ouarhou/",
-            "userId":"@lhoussaine ouarhou"
         },
         {
             "name":"gmail",
@@ -18,9 +13,19 @@ let resumeData = {
             "userId":"l.ouarhou.ensa@gmail.com"
         },
         {
+            "name":"linkedIn",
+            "url":"https://www.linkedin.com/in/lhoussaine-ouarhou/",
+            "userId":"@lhoussaine ouarhou"
+        },
+        {
             "name":"github",
             "url":"http://github.com/lhousaine",
             "userId":"lhousaine"
+        },
+        {
+            "name":"upWork",
+            "url":"https://www.upwork.com/freelancers/~010088e6cba5d43556",
+            "userId":"@lhoussaine ouarhou"
         }
     ],
     "skypeid": "lhoussaine ouarhou",
@@ -159,7 +164,7 @@ let resumeData = {
             "skillname": "Databases: MySQL, MongoDB, Oracle,Postres, Firebaser"
         },
         {
-            "skillname": "Familiar with Android, Flutter"
+            "skillname": "Familiar with Android, Flutter, Python(Flask), PHP"
         }
     ],
     "portfolio": [

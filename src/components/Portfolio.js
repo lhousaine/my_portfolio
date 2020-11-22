@@ -1,31 +1,62 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
-export default class Porfolio extends Component {
-    render() {
-        let resumeData = this.props.resumeData;
-        return (
-            <section id="portfolio" className="portfolio">
-                <div className="row">
-                    <div className="title">Check Out Some of My Works.</div>
-                    <div className="portfolio_works">
-                        {
-                            resumeData.portfolio && resumeData.portfolio.map((item) => {
-                                return (
-                                    <div className="portfolio-work">
-                                        <div className="overlay">
-                                            <div className="portfolio-item-meta">
-                                                <h5>{item.name}</h5>
-                                                <p>{item.description}</p>
-                                            </div>
-                                        </div>
-                                        <img src={process.env.PUBLIC_URL + item.imgurl} className="work_img" />
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+export default function Porfolio(props) {
+    
+    const useStyles = makeStyles({
+        root: {
+            maxWidth: 500,
+            minWidth: 300,
+        },
+        media: {
+            height: 300,
+            minHeight:140,
+        },
+    });
+
+    const classes = useStyles();
+
+    let resumeData = props.resumeData;
+
+    return (
+        <section id="portfolio" className="portfolio">
+            <div className="row">
+                <div className="title">Check Out Some of My Works.</div>
+                <div className="portfolio_works">
+                    {
+                        
+                        resumeData.portfolio && resumeData.portfolio.map((item) => {
+                            return (
+                                <Box m={1} p={1} className="portfolio-work">
+                                <Card className={classes.root}>
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={process.env.PUBLIC_URL + item.imgurl}
+                                            title="Contemplative Reptile"
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h4" component="h2">
+                                                {item.name}
+                                            </Typography>
+                                            <Typography variant="body2" color="textPrimary" component="h5">
+                                                {item.description}
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Card>
+                                </Box>
+                            )
+                        })
+                    }
                 </div>
-            </section>
-        );
-    }
+            </div>
+        </section>
+    );
 }

@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
-export default class Resume extends Component {
-    render() {
-        let resumeData = this.props.resumeData;
-        return (
-            <section id="resume" className="resume">
+import React from 'react';
+import Typography from '@material-ui/core/Typography';
+
+export default function Resume(props) {
+
+    let resumeData = props.resumeData;
+    return (
+        <section id="resume" className="resume">
+            <div className="resume-content">
                 <div className="education">
-                    <div className="three columns header-col">
-                        <h1><span>Education</span></h1>
+                    <div className="header-col">
+                        <h1>
+                            <span>Education</span>
+                        </h1>
                     </div>
-                    <div className="nine columns main-col">
+                    <div>
                         {
                             resumeData.education && resumeData.education.map((item) => {
                                 return (
@@ -22,12 +27,12 @@ export default class Resume extends Component {
                                             </p>
                                             <ul>
                                                 {
-                                            item.Achievements && item.Achievements.map((item) => {
-                                                return (
-                                                    <li>{item}</li>
-                                                )
-                                            })
-                                            }
+                                                    item.Achievements && item.Achievements.map((item) => {
+                                                        return (
+                                                            <li>{item}</li>
+                                                        )
+                                                    })
+                                                }
                                             </ul>
                                         </div>
                                     </div>
@@ -61,7 +66,7 @@ export default class Resume extends Component {
                                                         })
                                                     }
                                                 </ul>
-                                                {item.Tools?<h4>Tools :</h4>:""}
+                                                {item.Tools ? <h4>Tools :</h4> : ""}
                                                 <ul className="tools">
                                                     {
                                                         item.Tools && item.Tools.map((item) => {
@@ -80,7 +85,7 @@ export default class Resume extends Component {
                     </div>
                 </div>
                 <div className="skills">
-                    <div className="three columns header-col">
+                    <div className="columns">
                         <h1><span>Skills</span></h1>
                     </div>
                     <div className="nine columns main-col">
@@ -100,7 +105,14 @@ export default class Resume extends Component {
                         </div>
                     </div>
                 </div>
-            </section>
-        );
-    }
+            </div>
+            <div className="resume-link">
+                <a href={process.env.PUBLIC_URL + '/resume.pdf'} target="_blank">
+                    <Typography variant="h3" gutterBottom>
+                        Download Resume
+                    </Typography>
+                </a>
+            </div>
+        </section>
+    );
 }
