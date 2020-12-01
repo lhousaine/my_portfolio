@@ -7,18 +7,18 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 500,
+        minWidth: 300,
+    },
+    media: {
+        height: 300,
+        minHeight:140,
+    },
+});
+
 export default function Porfolio(props) {
-    
-    const useStyles = makeStyles({
-        root: {
-            maxWidth: 500,
-            minWidth: 300,
-        },
-        media: {
-            height: 300,
-            minHeight:140,
-        },
-    });
 
     const classes = useStyles();
 

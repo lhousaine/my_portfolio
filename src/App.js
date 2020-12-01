@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header resumeData={resumeData} />
+        <Header/>
         <About resumeData={resumeData} />
         <Resume resumeData={resumeData} />
         <Portfolio resumeData={resumeData} />

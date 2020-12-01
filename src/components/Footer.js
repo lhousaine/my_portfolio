@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default function Footer(props) {
     let resumeData = this.props.resumeData;
@@ -23,7 +23,7 @@ export default function Footer(props) {
                     </ul>
                 </div>
                 <div id="go-top">
-                    <a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open" />
+                    <a title="Back to Top" href="#home">
                 </a></div>
             </div>
         </footer>
