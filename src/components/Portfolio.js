@@ -16,6 +16,11 @@ const useStyles = makeStyles({
         height: 300,
         minHeight:140,
     },
+    title: {
+        color: "#000",
+        textAlign: "center",
+        fontWeight:"bold",
+    }
 });
 
 export default function Porfolio(props) {
@@ -27,7 +32,9 @@ export default function Porfolio(props) {
     return (
         <section id="portfolio" className="portfolio">
             <div className="row">
-                <div className="title">Check Out Some of My Works.</div>
+                <Typography className={classes.title} variant="h3" component="div">
+                    Check Out Some of My Works.
+                </Typography>
                 <div className="portfolio_works">
                     {
                         

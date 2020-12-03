@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
     return (
         <React.Fragment>
-            <header id="home">
+            <header className="header" id="home">
                 <div className="header-links">
                     <ul className="links">
                         <li className="current">

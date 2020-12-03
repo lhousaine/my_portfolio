@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -42,7 +42,7 @@ export default function ContactMe(props) {
                             resumeData.contacts && resumeData.contacts.map(item => {
                                 return (
                                     <li key={item.name}>
-                                        <a className="contact" href={item.url} target="">
+                                        <a className="contact" href={item.url} rel="noopener noreferrer" target="_blank">
                                         <span>  {contactIcon(item.name)}   </span>
                                             <span>{item.userId}</span>
                                         </a>

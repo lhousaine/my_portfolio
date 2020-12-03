@@ -1,7 +1,19 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+    aboutme: {
+        fontFamily: "Times New Roman , Times, serif",
+        paddingLeft: "20px",
+    },
+    childElement: {
+        paddingLeft: "20px",
+    }
+});
 
 export default function About(props) {
-    
+    const { aboutme, childElement } = useStyles();
     let resumeData = props.resumeData;
 
     return (
@@ -9,32 +21,33 @@ export default function About(props) {
             <div>
                 <img className="profile-pic" src={process.env.PUBLIC_URL + '/imgs/profile.jpg'} alt="My Profile Images" />
             </div>
-            <div className="main-col">
-                <h2>About Me </h2>
-                <p>
+            <div>
+                <Typography color="inherit" variant="h3" component="h2">
+                    About Me
+                </Typography>
+                <Typography className={aboutme} color="inherit" variant="h4" component="p">
                     {
                         resumeData.aboutme
                     }
-                </p>
-                <div className="row">
-                    <div className="contact-details">
-                        <h2>Contact Details</h2>
-                        <p className="address">
-                            <span>{resumeData.name}</span>
-                            <br></br>
-                            <span>
-                                {resumeData.address}
-                            </span>
-                            <br></br>
-                            <span>
-                                {resumeData.phone_number}
-                            </span>
-                            <br></br>
-                            <span>
-                                {resumeData.email}
-                            </span>
-                        </p>
-                    </div>
+                </Typography>
+
+                <Typography color="inherit" variant="h3" component="h2">
+                    Contact Details
+                    </Typography>
+                <div className={childElement}>
+                    <Typography variant="h5" component="p">
+                        {resumeData.name}
+                    </Typography>
+                    <Typography variant="h5" component="p">
+                        {resumeData.address}
+                    </Typography>
+
+                    <Typography variant="h5" component="p">
+                        {resumeData.phone_number}
+                    </Typography>
+                    <Typography variant="h5" component="p">
+                        {resumeData.email}
+                    </Typography>
                 </div>
             </div>
         </section>
