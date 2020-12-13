@@ -1,4 +1,14 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+    skills: {
+        backgroundColor: '#7B17E5',
+        color: 'white',
+        display: 'flex',
+        flexDirection: 'row',
+    },
+});
 
 export default function Skills(props) {
     let skills = props.skills;

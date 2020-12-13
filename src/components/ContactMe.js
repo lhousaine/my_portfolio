@@ -7,52 +7,73 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 
 const useStyles = makeStyles({
-    root: {
-        width: '100%',
-        maxWidth: 1000,
+    contactMe: {
+        backgroundColor: '#203040',
+        color: 'white'
     },
+    title: {
+        textAlign: 'center'
+    },
+    contactContents: {
+        padding: '0 40%'
+    },
+    contacts: {
+        listStyleType: 'none'
+    },
+    contact: {
+        textDecoration: 'solid',
+        textDecorationLine: 'none',
+        color: '#ffffff',
+        fontSize: 'medium',
+        fontFamily: 'Verdana, Geneva, Tahoma, sans-serif',
+        fontStyle: 'inherit',
+        display: 'flex',
+        flexDirection: 'row'
+    },
+    icon: {
+        color: "#ff2873",
+        textAlign: 'center',
+    },
+    contactText:{
+        marginLeft:'10%'
+    }
 });
 
 export default function ContactMe(props) {
     const classes = useStyles();
-
     let resumeData = props.resumeData;
     const contactIcon = (contactName) => {
         switch (contactName) {
-
-            case "linkedIn": return <LinkedInIcon color="secondary" fontSize="large" />;
-            case "github": return <GitHubIcon color="secondary" fontSize="large" />;
-            case "gmail": return <EmailIcon color="secondary" fontSize="large" />;
-            case "phoneNumber": return <PhoneIcon color="secondary" fontSize="large" />;
-            case "upWork": return <h4 style={{display: 'inline', color: "#ff2873"}}>UPW</h4>;
-            default: return <h1> </h1>
+            case "linkedIn": return <LinkedInIcon className={classes.icon} color="secondary" fontSize="large" />;
+            case "github": return <GitHubIcon className={classes.icon} color="secondary" fontSize="large" />;
+            case "gmail": return <EmailIcon className={classes.icon} color="secondary" fontSize="large" />;
+            case "phoneNumber": return <PhoneIcon className={classes.icon} color="secondary" fontSize="large" />;
+            case "upWork": return <Typography className={classes.icon} variant="h3" component="h1" fontSize="large">uPw</Typography>;
+            default: return <Typography> </Typography>
         }
     }
     return (
-        <section id="contact" className="contactMe">
-            <div className={classes.root}>
-                <Typography variant="h4" gutterBottom>
+        <section id="contact" className={classes.contactMe}>
+            <div className={classes.title}>
+                <Typography variant="h3" gutterBottom>
                     Feel free to contact me for any work or suggestions below:
                 </Typography>
             </div>
-            <div>
-                <aside>
-                    <ul className="contacts">
-                        {
-                            resumeData.contacts && resumeData.contacts.map(item => {
-                                return (
-                                    <li key={item.name}>
-                                        <a className="contact" href={item.url} rel="noopener noreferrer" target="_blank">
-                                        <span>  {contactIcon(item.name)}   </span>
-                                            <span>{item.userId}</span>
-                                        </a>
-                                    </li>
-                                )
-                            }
+            <div className={classes.contactContents}>
+                <ul className={classes.contacts}>
+                    {
+                        resumeData.contacts && resumeData.contacts.map(item => {
+                            return (
+                                <li key={item.name}>
+                                    <a className={classes.contact} href={item.url} rel="noopener noreferrer" target="_blank">
+                                        {contactIcon(item.name)}
+                                        <Typography className={classes.contactText} variant="h4" component="p">{item.userId}</Typography>
+                                    </a>
+                                </li>
                             )
-                        }
-                    </ul>
-                </aside>
+                        })
+                    }
+                </ul>
             </div>
         </section>
     );

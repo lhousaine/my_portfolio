@@ -53,18 +53,6 @@ section{
   flex-direction: row;
 }
 
-/* About */
-.about{
-  background-color: #7B17E5;
-  color: white;
-  display: flex;
-  flex-direction: row;
-}
-
-.about div{
-  padding-right:10px;
-}
-
 /* Resume */
 
 .resume{
@@ -135,28 +123,7 @@ section{
 }
 
 /*Contact Me*/
-.contactMe{
-  background-color: #203040;
-  color: white;
-  padding-left: 30%;
-}
-.contacts{
-  list-style-type:none;
-}
-.contact{
-  text-decoration: solid;
-  text-decoration-line: none;
-  color: #ffffff;
-  font-size: medium;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-style: inherit;
-}
 a:hover{
   color: #f1951c;
 }
 /* Footer */ 
-.footer{
-  width: 100%;
-  background-color: #203040;
-  color: #ffffff;
-}
