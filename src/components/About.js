@@ -4,7 +4,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
     about: {
-        backgroundColor: '#7B17E5',
+        backgroundColor: '#0F58F4',
         color: 'white',
         display: 'flex',
         flexDirection: 'row',

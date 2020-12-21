@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         width: '40%',
         height: '400px',
         display: 'inline-block',
-        margin: '0 2%'
+        margin: '0 3%'
     },
     card: {
         maxWidth: 500,

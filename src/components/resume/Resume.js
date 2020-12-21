@@ -15,7 +15,10 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        flexWrap:'nowrap'
+        flexWrap:'nowrap',
+        "& > *":{
+            margin: '0 3%'
+        }
     }
 });
 export default function Resume(props) {
