@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
     about: {
@@ -29,10 +29,10 @@ export default function About(props) {
 
     return (
         <section id="about" className={about}>
-            <div className={aboutChilds}>
+            <Grid className={aboutChilds}>
                 <img className="profile-pic" src={process.env.PUBLIC_URL + '/imgs/profile.jpg'} alt="My Profile Images" />
-            </div>
-            <div className={aboutChilds}>
+            </Grid>
+            <Grid className={aboutChilds}>
                 <Typography color="inherit" variant="h3" component="h2">
                     About Me
                 </Typography>
@@ -45,7 +45,7 @@ export default function About(props) {
                 <Typography color="inherit" variant="h3" component="h2">
                     Contact Details
                 </Typography>
-                <div className={childElement}>
+                <Grid className={childElement}>
                     <Typography variant="h4" component="p">
                         {resumeData.name}
                     </Typography>
@@ -59,8 +59,8 @@ export default function About(props) {
                     <Typography variant="h4" component="p">
                         {resumeData.email}
                     </Typography>
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         </section>
     );
 }

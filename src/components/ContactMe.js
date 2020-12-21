@@ -5,6 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
+import { Grid, Link, List, ListItem } from '@material-ui/core';
 
 const useStyles = makeStyles({
     contactMe: {
@@ -54,27 +55,27 @@ export default function ContactMe(props) {
     }
     return (
         <section id="contact" className={classes.contactMe}>
-            <div className={classes.title}>
+            <Grid className={classes.title}>
                 <Typography variant="h3" gutterBottom>
                     Feel free to contact me for any work or suggestions below:
                 </Typography>
-            </div>
-            <div className={classes.contactContents}>
-                <ul className={classes.contacts}>
+            </Grid>
+            <Grid className={classes.contactContents}>
+                <List className={classes.contacts}>
                     {
                         resumeData.contacts && resumeData.contacts.map(item => {
                             return (
-                                <li key={item.name}>
-                                    <a className={classes.contact} href={item.url} rel="noopener noreferrer" target="_blank">
+                                <ListItem key={item.name}>
+                                    <Link className={classes.contact} href={item.url} rel="noopener noreferrer" target="_blank">
                                         {contactIcon(item.name)}
                                         <Typography className={classes.contactText} variant="h4" component="p">{item.userId}</Typography>
-                                    </a>
-                                </li>
+                                    </Link>
+                                </ListItem>
                             )
                         })
                     }
-                </ul>
-            </div>
+                </List>
+            </Grid>
         </section>
     );
 }

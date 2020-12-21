@@ -1,50 +1,94 @@
 import React from 'react';
+import { List, ListItem, ListItemText, makeStyles, Typography, Box } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+    works: {
+        backgroundColor: '#FBFBFB',
+        borderRadius: '20px',
+        color: '201A23',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '5px'
+    },
+    title: {
+        color: '201A23',
+        textAlign: 'center'
+    },
+    specialization: {
+        fontWeight: 'bold',
+        fontSize: '20px',
+    },
+    achievement: {
+        color: '#000',
+        margin: '0 20px',
+        fontWeight: 'bold',
+        fontSize: '20px',
+        padding: 0,
+    },
+    tool: {
+        color: '#fff',
+        backgroundColor: '#813273',
+        marginTop: `5px`,
+        fontWeight: 'bold',
+        borderRadius: '10px',
+        '&:hover': {
+            background: '#fff',
+            color: '#202020',
+        },
+    },
+}));
 
 export default function Works(props) {
     let works = props.works;
+    const classes = useStyles();
     return (
-        <div className="works">
-            <div>
-                <h1><span>Work and Experinces</span></h1>
-            </div>
-            <div className="nine columns main-col">
+        <Box className={classes.works}>
+            <Typography variant='h1' component='h2' className={classes.title}>
+                Work and Experiences
+            </Typography>
+            <Box>
                 {
                     works && works.map((item) => {
                         return (
-                            <div className="row item">
-                                <div className="twelve columns">
-                                    <h3>{item.CompanyName}</h3>
-                                    <p className="info">
+                            <Box>
+                                <Box>
+                                    <Typography variant='h3' component='h4' color='primary'>{item.CompanyName}</Typography>
+                                    <Typography variant='p' className={classes.specialization}>
                                         {item.specialization}
-                                        <span>&bull;</span> <em className="date">{item.MonthOfLeaving} - {item.YearOfLeaving}</em></p>
-                                    <p>
-                                        <h4>{item.theme}</h4>
-                                        <ul className="achievements">
+                                        <span>&bull;</span> <em className="date">{item.MonthOfLeaving} - {item.YearOfLeaving}</em>
+                                    </Typography>
+                                    <Box>
+                                        <Typography variant='h4' component='h4'><i>{item.theme}</i></Typography>
+                                        <List component="nav" className={classes.list}>
                                             {
                                                 item.Achievements && item.Achievements.map((item) => {
                                                     return (
-                                                        <li>{item}</li>
+                                                        <ListItem className={classes.achievement}>
+                                                            <ListItemText primary={item} />
+                                                        </ListItem>
                                                     )
                                                 })
                                             }
-                                        </ul>
-                                        {item.Tools ? <h4>Tools :</h4> : ""}
+                                        </List>
+                                        {item.Tools ? <Typography variant='h3'><b>Tools :</b></Typography> : ""}
                                         <ul className="tools">
                                             {
                                                 item.Tools && item.Tools.map((item) => {
                                                     return (
-                                                        <li>{item}</li>
+                                                        <ListItem variant='h3' className={classes.tool}>
+                                                            <ListItemText primary={item} />
+                                                        </ListItem>
                                                     )
                                                 })
                                             }
                                         </ul>
-                                    </p>
-                                </div>
-                            </div>
+                                    </Box>
+                                </Box>
+                            </Box>
                         )
                     })
                 }
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }

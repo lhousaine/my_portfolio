@@ -91,7 +91,7 @@ let resumeData = {
             "specialization": "Web Developer-Intern",
             "MonthOfLeaving": "Jully - August",
             "YearOfLeaving": "2019",
-            "theme":"Web Programming:",
+            "theme":"Web Development:",
             "Achievements": [
               "Axis 1: Creation Under WordPress of the SIMLAB Department Website, and Configuration of its deployment in a nginx server.",
               "Axis 2: Study and Design of a web service for dynamic inventory analysis and management."
@@ -102,7 +102,7 @@ let resumeData = {
             "specialization": "Web Developer-Intern",
             "MonthOfLeaving": "Jully - September",
             "YearOfLeaving": "2018",
-            "theme":"Web Programming:",
+            "theme":"Web Development:",
             "Achievements": [
               "Development of a news website with (HTML, CSS, JS, AngularJS, MySQL, and PHP)"
             ]
@@ -117,7 +117,7 @@ let resumeData = {
             "skillname": "JEE (JPA, JSP, Hibernate, Struts,JSF)"
         },
         {
-            "skillname": "Spring and it's Modules(Boot,Data, MVC, Security, Batch, WebFlux, AOP)"
+            "skillname": "Spring(Boot,Data, MVC, Security, Batch, WebFlux, AOP)"
         },
         {
             "skillname": "Javascript/Typescript"

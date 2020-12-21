@@ -1,35 +1,70 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import { Box, makeStyles, Link } from '@material-ui/core';
 
+const useStyles = makeStyles({
+    resumeLinks: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        '& a': {
+            display: 'block',
+            width: '100%',
+            textDecoration: 'none',
+            textlign: 'center',
+            color: '#a19a7b',
+        }
+    },
+    inactiveLink: {
+        pointerEvents: 'none',
+        cursor: 'default',
+        color: '#ffffff',
+    },
+    "@keyframes animateLink": {
+        '0%': { color: '#ff8800' },
+        '25%': { color: 'red' },
+        '50%': { color: 'blue' },
+        '75%': { color: '#103610' },
+        '100%': { color: '#ffffff' },
+    },
+    activeLink: {
+        animationName: '$animateLink',
+        animationDuration: '5s',
+        animationIterationCount: 'infinite'
+    },
+});
 
 export default function ResumeLink() {
+    const classes = useStyles();
     return (
-        <div className="resume-links">
-            <a href={process.env.PUBLIC_URL + '/resume_LhoussaineOUARHOU.pdf'}
+        <Box className={classes.resumeLinks}>
+
+            <Link href={process.env.PUBLIC_URL + '/resume_LhoussaineOUARHOU.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inactiveLink">
+                className={classes.inactiveLink}>
                 <Typography variant="h3" gutterBottom>
                     Download Resume :
-                    </Typography>
-            </a>
+                </Typography>
+            </Link>
 
-            <a href={process.env.PUBLIC_URL + '/cv_LhoussaineOUARHOU.pdf'}
+            <Link href={process.env.PUBLIC_URL + '/cv_LhoussaineOUARHOU.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="activeLink">
+                className={classes.activeLink}>
                 <Typography variant="h4" gutterBottom>
                     French Version
-                    </Typography>
-            </a>
-            <a href={process.env.PUBLIC_URL + '/resume_LhoussaineOUARHOU.pdf'}
+                </Typography>
+            </Link>
+
+            <Link href={process.env.PUBLIC_URL + '/resume_LhoussaineOUARHOU.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="activeLink">
+                className={classes.activeLink}>
                 <Typography variant="h4" gutterBottom>
                     English Version
-                    </Typography>
-            </a>
-        </div>
+                </Typography>
+            </Link>
+        </Box>
     )
 }

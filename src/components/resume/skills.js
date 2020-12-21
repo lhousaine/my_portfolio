@@ -1,38 +1,52 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { List, ListItem, ListItemText, makeStyles, Typography, Box } from '@material-ui/core';
 
 const useStyles = makeStyles({
     skills: {
-        backgroundColor: '#7B17E5',
-        color: 'white',
+        backgroundColor: '#FBFBFB',
+        borderRadius: '20px',
+        color: '201A23',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
+        padding: '5px'
+    },
+    title: {
+        color: '201A23',
+        textAlign: 'center'
+    },
+    skill: {
+        color: '#fff',
+        backgroundColor: '#813273',
+        marginTop: `5px`,
+        borderRadius: '10px',
+        '&:hover': {
+            background: '#fff',
+            color: '#202020',
+        },
     },
 });
 
 export default function Skills(props) {
+    const classes = useStyles();
     let skills = props.skills;
     return (
-        <div className="skills">
-            <div className="columns">
-                <h1><span>Skills</span></h1>
-            </div>
-            <div>
-                <div className="bars">
-                    <ul className="skills">
-                        {
-                            skills && skills.map((item) => {
-                                return (
-                                    <li>
-                                        <span className={`bar-expand ${item.skillname.toLowerCase()}`}>
-                                        </span><em>{item.skillname}</em>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <Box className={classes.skills}>
+            <Typography variant='h1' component='h2' className={classes.title}>
+                Skills
+            </Typography>
+            <Box>
+                <List component="nav" className={classes.root}>
+                    {
+                        skills && skills.map((item) => {
+                            return (
+                                <ListItem variant='h3' className={classes.skill}>
+                                    <ListItemText primary={item.skillname} />
+                                </ListItem>
+                            )
+                        })
+                    }
+                </List>
+            </Box>
+        </Box>
     )
 }
