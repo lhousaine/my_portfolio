@@ -39,7 +39,7 @@ export default function ResumeLink() {
     return (
         <Box className={classes.resumeLinks}>
 
-            <Link href={process.env.PUBLIC_URL + '/resume_LhoussaineOUARHOU.pdf'}
+            <Link href={process.env.PUBLIC_URL + '/docs/resume_LhoussaineOUARHOU.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.inactiveLink}>
@@ -48,7 +48,7 @@ export default function ResumeLink() {
                 </Typography>
             </Link>
 
-            <Link href={process.env.PUBLIC_URL + '/cv_LhoussaineOUARHOU.pdf'}
+            <Link href={process.env.PUBLIC_URL + '/docs/cv_LhoussaineOUARHOU.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.activeLink}>
@@ -57,7 +57,7 @@ export default function ResumeLink() {
                 </Typography>
             </Link>
 
-            <Link href={process.env.PUBLIC_URL + '/resume_LhoussaineOUARHOU.pdf'}
+            <Link href={process.env.PUBLIC_URL + '/docs/resume_LhoussaineOUARHOU.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.activeLink}>
