@@ -8,7 +8,9 @@ const useStyles = makeStyles({
         color: '201A23',
         display: 'flex',
         flexDirection: 'column',
-        padding: '5px'
+        width: '100%',
+        padding: '5px',
+        margin: '2% 5%'
     },
     title: {
         color: '201A23',
@@ -23,7 +25,8 @@ const useStyles = makeStyles({
     },
     achievement: {
         color: '#fff',
-        backgroundColor: '#813273',
+        backgroundColor: '#52ACFF',
+        backgroundImage: "linear-gradient('180deg', '#52ACFF 25%', '#FFE32C 100%')",
         marginTop: `5px`,
         fontWeight: 'bold',
         borderRadius: '10px',

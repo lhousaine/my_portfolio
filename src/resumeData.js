@@ -5,7 +5,7 @@ let resumeData = {
     "contacts":[
         {
             "name":"phoneNumber",
-            "userId":"(+212)603708829"
+            "userId":"(+212)679711689"
         },
         {
             "name":"gmail",
@@ -45,7 +45,7 @@ let resumeData = {
     "aboutme": "I am a computer sciences engineer , graduated from the National School of Applied Sciences of Marrakech. I am interested in full-stack development & Microservices Architectures and everything in its orbit. I like to learn and create web applications in various parts of software development and like to learn about new technologies.",
     "address": "DR AIT ALLA TAZARINE ZAGORA, MAROC",
     "website": "https://lhousaine.github.io",
-    "phone_number":"(+212)603708829",
+    "phone_number":"(+212)679711689",
     "email":"l.ouarhou.ensa@gmail.com",
     "education": [
         {
@@ -68,6 +68,24 @@ let resumeData = {
         }
     ],
     "work": [
+        {
+            "CompanyName": "Valessentia",
+            "specialization": "Full stack Developer JS-MEAN Stack",
+            "MonthOfLeaving": "December 2020 - Present",
+            "theme":"Design and development of a kanban process management solution",
+            "Achievements": [ 
+               "Develop the solution features using MEAN Stack technologies.",
+               "Collaborate in the specifications analysis and development planning with the technical leader.",
+               "Collaborate promptly with the Front End team.",
+               "Define internal training programs that increase the overall competence of the team.",
+            ],
+            "Tools": [
+              "Backend : Nodejs, Express.js" ,
+              "Front End:  AngularJS, Angular-ui,, Bootstrap",
+              "Data Visualisation : D3.js",
+              "Database: MongoDB"
+            ]
+        },
         {
             "CompanyName": "SQLI ISC MAROC",
             "specialization": "Developer Java/JEE/Microservices- Intern",
@@ -111,19 +129,19 @@ let resumeData = {
     "skillsDescription": "my professional skills",
     "skills": [
         {
-            "skillname": "Java"
-        },
-        {
-            "skillname": "JEE (JPA, JSP, Hibernate, Struts,JSF)"
-        },
-        {
-            "skillname": "Spring(Boot,Data, MVC, Security, Batch, WebFlux, AOP)"
-        },
-        {
             "skillname": "Javascript/Typescript"
         },
         {
             "skillname": "Node.js/ExpressJS"
+        },
+        {
+            "skillname": "Java"
+        },
+        {
+            "skillname": "JEE (JPA, JSP, Hibernate)"
+        },
+        {
+            "skillname": "Spring(Boot,Data, MVC, Security )"
         },
         {
             "skillname": "Angular"
@@ -153,19 +171,16 @@ let resumeData = {
             "skillname": "Gitlab CI/CD"
         },
         {
-            "skillname": "Cloud Plateforms (Azure, IBM, GCP)"
-        },
-        {
             "skillname": "Service mesh (Istio, Linkerd2, Consul)"
         },
         {
-            "skillname": "Git, Gitlab, Github"
+            "skillname": "Databases: MySQL, MongoDB, Firebaser"
         },
         {
-            "skillname": "Databases: MySQL, MongoDB, Oracle,Postres, Firebaser"
+            "skillname": "env of dev: Vscode, Git, Github, Gira, Scrum, Trello, slack"
         },
         {
-            "skillname": "Familiar with Android, Flutter, Python(Flask), PHP"
+            "skillname": "Familiar with Cloud Plateforms (Azure, IBM, GCP)"
         }
     ],
     "portfolio": [

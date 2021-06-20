@@ -8,15 +8,19 @@ const useStyles = makeStyles({
         color: '201A23',
         display: 'flex',
         flexDirection: 'column',
-        padding: '5px'
+        width: '100%',
+        padding: '5px',
+        margin: '2% 5%'
     },
     title: {
         color: '201A23',
         textAlign: 'center'
     },
     skill: {
+        backgroundColor: '#52ACFF',
+        backgroundImage: "linear-gradient('180deg', '#52ACFF 25%', '#FFE32C 100%')",
         color: '#fff',
-        backgroundColor: '#813273',
+       // backgroundColor: '#3edbf0',
         marginTop: `5px`,
         borderRadius: '10px',
         '&:hover': {

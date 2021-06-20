@@ -8,16 +8,20 @@ import { Box, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
     resume: {
-        backgroundColor: '#00A5D0',
+        backgroundColor: '#8181bb',
+        backgroundImage: 'linear-gradient(160deg, #8181bb 0%, #000000 100%)',
         color: '#010101',
     },
-    resumeContent:{
+    eduSkills: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         flexWrap:'nowrap',
+        padding: '0 3%'
+    },
+    resumeContent:{
         "& > *":{
-            margin: '0 3%'
+            margin: '3% 3%'
         }
     }
 });
@@ -27,9 +31,11 @@ export default function Resume(props) {
     return (
         <section id="resume" className={classes.resume}>
             <Box className={classes.resumeContent}>
-                <Education education={resumeData.education} />
                 <Works works={resumeData.work} />
+                <Box className={classes.eduSkills}>
+                <Education education={resumeData.education} />
                 <Skills skills={resumeData.skills} />
+                </Box>
             </Box>
             <ResumeLink/>
         </section>
