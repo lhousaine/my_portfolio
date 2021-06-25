@@ -5,7 +5,7 @@ let resumeData = {
     "contacts":[
         {
             "name":"phoneNumber",
-            "userId":"(+212)679711689"
+            "userId":"(+212)603708829"
         },
         {
             "name":"gmail",
@@ -45,7 +45,7 @@ let resumeData = {
     "aboutme": "I am a computer sciences engineer , graduated from the National School of Applied Sciences of Marrakech. I am interested in full-stack development & Microservices Architectures and everything in its orbit. I like to learn and create web applications in various parts of software development and like to learn about new technologies.",
     "address": "DR AIT ALLA TAZARINE ZAGORA, MAROC",
     "website": "https://lhousaine.github.io",
-    "phone_number":"(+212)679711689",
+    "phone_number":"(+212)603708829",
     "email":"l.ouarhou.ensa@gmail.com",
     "education": [
         {
